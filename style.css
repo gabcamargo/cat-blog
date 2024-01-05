@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --color-base-white: #FFFFFF;
+    --color-base-blue: #065E7C;
+    --color-base-light-blue: #387E96;
+    --color-base-alice-blue: #F4FCFF;
+    --color-base-dark-gray: #202024;
+    --color-base-black: #121214;
+}
+
+html, body, input {
+    font-family: 'Mulish', sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--color-base-alice-blue);
+    color: var(--color-base-black);
+}
+
+#app {
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    height: 100vh;
+}
+
+header {
+    background-color: var(--color-base-blue);
+}
+
+.input-wrapper input {
+    width: 108.3rem;
+    height: 4rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: var(--color-base-light-blue);
+    padding: 1.2rem 1.6rem;
+}
+
+.input-wrapper input::placeholder {
+    opacity: 0.56;
+    color: var(--color-base-white);
+}
+
+.container nav {
+    display: flex;
+    align-items: center;
+    gap: 2.6rem;
+    padding: 0.9rem 10rem;
+}
+
+nav img:first-child {
+    width: 4rem;
+    height: 4rem;
+}
+
+.avatar {
+    width: 4.2rem;
+    height: 4.2rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.grid-container {
+    padding: 4.4rem 10.9rem;
+    display: flex;
+    gap: 3.4rem;
+}
+
+.title h1, 
+aside h2 {
+    font-size: 2.4rem;
+}
+
+.title {
+    padding: 32px 0 39px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons button {
+    border: none;
+    background: none;
+}
+
+.buttons button:hover {
+    filter: brightness(120%) hue-rotate(0deg) saturate(100%);
+}
+
+.buttons button:first-child:active {
+    filter: hue-rotate(280deg);
+}
+
+.buttons button:last-child:active {
+    filter: hue-rotate(150deg);
+}
+
+.title button img {
+    width: 4rem;
+    height: 4rem;
+}
+
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    padding-top: 3.2rem;
+}
+
+.image {
+    width: 80.3rem;
+    height: 40.5rem;
+    border-radius: 0.5rem;
+}
+
+.card img {
+    width: 15.1rem;
+    height: 8.4rem;
+    border-radius: 0.5rem;
+}
+
+.principal p, 
+.description p {
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.principal p {
+    width: 80rem;
+}
+
+.principal p:last-child {
+    padding: 32px 0 39px;
+}
+
+.description p {
+    width: 21.5rem;
+    font-size: 1.4rem;
+}
