@@ -9,8 +9,10 @@
 :root {
     font-size: 62.5%;
 
+    --font-base: 'Mulish', sans-serif;
+
     --color-base-white: #FFFFFF;
-    --color-base-blue: #065E7C;
+    --color-base-primary-blue: #065E7C;
     --color-base-light-blue: #387E96;
     --color-base-alice-blue: #F4FCFF;
     --color-base-dark-gray: #202024;
@@ -18,7 +20,7 @@
 }
 
 html, body, input {
-    font-family: 'Mulish', sans-serif;
+    font-family: var(--font-base);
 }
 
 body {
@@ -34,7 +36,7 @@ body {
 }
 
 header {
-    background-color: var(--color-base-blue);
+    background-color: var(--color-base-primary-blue);
 }
 
 .input-wrapper input {
@@ -49,6 +51,13 @@ header {
 .input-wrapper input::placeholder {
     opacity: 0.56;
     color: var(--color-base-white);
+    font-weight: 600;
+}
+
+.container {
+    width: min(150rem, 100%);
+    margin: 0 auto;
+    position: fixed;
 }
 
 .container nav {
@@ -71,7 +80,7 @@ nav img:first-child {
 }
 
 .grid-container {
-    padding: 4.4rem 10.9rem;
+    padding: 8.8rem 10.9rem;
     display: flex;
     gap: 3.4rem;
 }
@@ -79,13 +88,22 @@ nav img:first-child {
 .title h1, 
 aside h2 {
     font-size: 2.4rem;
+    font-weight: 700;
 }
 
 .title {
-    padding: 32px 0 39px;
+    padding: 3.2rem 0 3.9rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.principal p {
+    width: 80rem;
+}
+
+.principal p:last-child {
+    padding-top: 3.2rem;
 }
 
 .buttons button {
@@ -110,12 +128,11 @@ aside h2 {
     height: 4rem;
 }
 
-
 .card {
     display: flex;
     align-items: center;
     gap: 1.6rem;
-    padding-top: 3.2rem;
+    padding-top: 2.3rem;
 }
 
 .image {
@@ -136,15 +153,87 @@ aside h2 {
     line-height: 160%;
 }
 
-.principal p {
-    width: 80rem;
-}
-
-.principal p:last-child {
-    padding: 32px 0 39px;
-}
-
 .description p {
     width: 21.5rem;
     font-size: 1.4rem;
+    padding-top: .70rem;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--color-base-light-blue);
+    color: var(--color-base-white);
+    font-weight: 600;
+    padding: 1.6rem 0;
+}
+
+@media (max-width: 1024px) {
+    :root {
+        font-size: 50%;
+    }
+
+    body {
+        font-size: 1.4rem;
+    }
+
+    #app {
+        grid-template-rows: max-content 1fr;
+    }
+
+    .input-wrapper input {
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .container {
+        position: static;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container nav {
+        padding: 1.2rem 2.8rem;
+    }
+
+    .grid-container {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    .title {
+        padding: 2rem 1.6rem;
+    }
+
+    .buttons button img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .image {
+        width: 100%;
+        height: 219px;
+        object-fit: cover;
+        border-radius: 0;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .principal p {
+        width: auto;
+    }
+
+    .description p {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    
+    footer {
+        font-size: 1.2rem;
+    }
 }
